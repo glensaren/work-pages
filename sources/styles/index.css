@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+        overflow-x: hidden;
+    /* outline: 1px solid red; */
+}
+
+:root{
+    font-size: 62.5%;
+    --main-color : #E80298;
+    --accent-color : #E465B2;
+    --accent-color-50 : #e465b180;
+    --main-bg-color : #FFDDEE;
+}
+
+.menu{
+    display: inline-block;
+    background: white;
+    position: absolute;
+    z-index: 999;
+    top: 5.8rem;
+    right: -3.5rem;
+    font-size: 2rem;
+}
+
+.menu ul{
+    padding: 0 1rem 0 1.5rem;
+    list-style: none;
+}
+
+.menu.sliding-out{
+    animation: menu-sliding-out .5s forwards;
+}
+
+.menu.sliding-in{
+    animation: menu-sliding-in .5s forwards;
+}
+
+@keyframes menu-sliding-out {
+    from{
+        right: -3.5rem;
+    }
+
+    to{
+        right: 0;
+    }
+}
+
+@keyframes menu-sliding-in {
+    from{
+        right: 0rem;
+    }
+
+    to{
+        right: -3.5rem;
+    }
+}
+
+body{
+    margin: 0;
+    background: #FFDDEE;
+    scrollbar-color: red;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: var(--main-color);
+    min-height: 5rem;
+}
+
+.header-content-box{
+    padding: 0 1.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-border-box{
+    background-color: var(--accent-color-50);
+    height: .3rem;
+}
+
+.upper.header-border-box{
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.3);
+}
+
+.lower.header-border-box{
+    box-shadow: 0 -0.2rem .4rem rgba(0, 0, 0, 0.3);
+}
+
+.logo{
+    font-weight: 400;
+    font-size: 2rem;
+    font-family: "Inter" , sans-serif;
+    box-shadow: .5rem 0 1rem rgba(0, 0, 0, 0.271);
+    border: .15rem solid black;
+}
+
+.burger-menu-button{
+    margin: auto 0;
+    height: 2.4rem;
+}
+
+main{
+    padding: 2rem 1.5rem;
+}
+
+h2{
+    font-size: 2.4rem;
+    font-weight: 700;
+    font-family: "Cormorant Garamond";
+}
+
+.plain-text{
+    font-size: 2rem;
+    font-family: "Open Sans" 
+
+}
